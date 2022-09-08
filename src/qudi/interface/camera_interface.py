@@ -26,6 +26,7 @@ from PySide2 import QtCore
 from abc import abstractmethod
 from qudi.core.interface import ScalarConstraint
 from qudi.core.module import Base
+import numpy as np
 
 from enum import Enum
 
@@ -314,7 +315,7 @@ class CameraInterface(Base):
     # Method used only if constraints.has_cooler
     ##############################################################################
     @abstractmethod
-    def get_cooler_on(self) -> book:
+    def get_cooler_on(self) -> bool:
         """ Getter method returning the cooler status
 
         @return (bool): True if the cooler is on

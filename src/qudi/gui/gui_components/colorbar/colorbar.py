@@ -23,15 +23,15 @@ import os
 import pyqtgraph as pg
 from functools import partial
 
-from gui.colordefs import QudiPalettePale as Palette
-from gui.guibase import GUIBase
-from gui.colordefs import ColorScaleInferno
-from qtwidgets.scientific_spinbox import ScienDSpinBox, ScienSpinBox
+from qudi.util.colordefs import QudiPalettePale as Palette
+from qudi.util.gui.guibase import GUIBase
+from qudi.util.colordefs import ColorScaleInferno
+from qudi.util.widgets.scientific_spinbox import ScienDSpinBox, ScienSpinBox
 
 from qtpy import QtWidgets
 from qtpy import uic
-from gui.guiutils import ColorBar
-from gui.colordefs import ColorScaleMagma
+from qudi.util.widgets.plotting.colorbar import ColorBar
+from qudi.util.colordefs import ColorScaleMagma
 
 import numpy as np
 

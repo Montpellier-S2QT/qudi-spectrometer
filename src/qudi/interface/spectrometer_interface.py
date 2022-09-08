@@ -24,6 +24,7 @@ from PySide2 import QtCore
 from abc import abstractmethod
 from qudi.core.interface import ScalarConstraint
 from qudi.core.module import Base
+import numpy as np
 
 from enum import Enum
 

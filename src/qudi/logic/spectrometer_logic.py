@@ -35,7 +35,7 @@ from enum import Enum
 
 from qudi.interface.spectrometer_interface import PortType
 from qudi.interface.camera_interface  import ReadMode, ShutterState
-from hardware.cameras.andor_camera import TriggerMode, ImageAdvancedParameters
+from qudi.hardware.camera.andor_camera import TriggerMode, ImageAdvancedParameters
 
 from scipy import optimize
 

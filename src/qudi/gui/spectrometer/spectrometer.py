@@ -27,7 +27,7 @@ from qudi.core.module import GuiBase
 from qudi.core.connector import Connector
 from qudi.core.configoption import ConfigOption
 from .spectrometer_main_window import SpectrometerMainWindow
-from qudi.core.util.units import ScaledFloat
+from qudi.util.units import ScaledFloat
 from qudi.core.statusvariable import StatusVar
 from qudi.interface.spectrometer_interface import PortType
 from qudi.logic.spectrometer_logic import AcquisitionMode
@@ -37,7 +37,7 @@ import pyqtgraph as pg
 import numpy as np
 from functools import partial
 
-from qtwidgets.scientific_spinbox import ScienDSpinBox
+from qudi.util.widgets.scientific_spinbox import ScienDSpinBox
 from PyQt5.Qt import QRectF, QPoint
 
 from qudi.util.colordefs import ColorScaleInferno
