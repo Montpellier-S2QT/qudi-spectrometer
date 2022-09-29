@@ -3,6 +3,9 @@
 __all__ = ['SpectrometerMainWindow']
 
 from PySide2 import QtGui, QtCore, QtWidgets
+from qtpy import uic
+
+import os
 
 class SpectrometerMainWindow(QtWidgets.QMainWindow):
 

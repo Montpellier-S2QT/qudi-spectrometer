@@ -3,7 +3,7 @@
 __all__ = ['TemplateGui']
 
 from PySide2 import QtCore, QtWidgets
-
+qudi
 from qudi.core.module import GuiBase
 from qudi.core.connector import Connector
 from .template_main_window import TemplateMainWindow

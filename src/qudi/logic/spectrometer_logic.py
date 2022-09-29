@@ -18,7 +18,7 @@ along with Qudi. If not, see <http://www.gnu.org/licenses/>.
 Copyright (c) the Qudi Developers. See the COPYRIGHT.txt file at the
 top-level directory of this distribution and at <https://github.com/Ulm-IQO/qudi/>
 """
-__all__ = ['SpectrumLogic']
+__all__ = ['SpectrometerLogic']
 
 from PySide2 import QtCore, QtWidgets
 
@@ -57,8 +57,8 @@ class AcquisitionMode(Enum):
 class SpectrometerLogic(LogicBase):
     """ This logic module handle the spectrometer gratings and camera """
 
-    spectrometer = Connector(interface='GratingSpectrometerInterface')
-    camera = Connector(interface='ScienceCameraInterface')
+    spectrometer = Connector(interface='SpectrometerInterface')
+    camera = Connector(interface='CameraInterface')
 
     # declare config options :
     _reverse_data_with_side_output = ConfigOption('reverse_data_with_side_output', False)

@@ -25,7 +25,8 @@ from functools import partial
 
 from qudi.util.colordefs import QudiPalettePale as Palette
 from qudi.util.colordefs import ColorScaleInferno
-from qudi.util.gui.guibase import GUIBase
+from qudi.util.widgets.plotting.colorbar import ColorBarItem
+from qudi.core.module import GuiBase
 from qudi.util.widgets.scientific_spinbox import ScienDSpinBox, ScienSpinBox
 
 from qtpy import QtWidgets
@@ -182,7 +183,7 @@ class ColorbarWidget(QtWidgets.QWidget):
         """ Create the colorbar """
         self.my_colors = ColorScaleInferno()
         self._color_map = ColorScaleMagma()
-        self._cb = ColorBar(self.my_colors.cmap_normed, width=100, cb_min=self._cb_min, cb_max=self._cb_max)
+        self._cb = ColorBar(self.my_colors.colormap, width=100, cb_min=self._cb_min, cb_max=self._cb_max)
         self.colorbar.addItem(self._cb)
         self.colorbar.hideAxis('bottom')
         self.colorbar.setLabel('left', 'Intensity', units=self.unit)

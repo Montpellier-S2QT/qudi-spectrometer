@@ -26,13 +26,12 @@ from PySide2 import QtCore, QtWidgets
 from qudi.core.module import GuiBase
 from qudi.core.connector import Connector
 from qudi.core.configoption import ConfigOption
-from .spectrometer_main_window import SpectrometerMainWindow
+from .spectrometer_main_window import SpectrometerMainWindow, ImageTab, SettingsTab, SpectrumTab, AlignmentTab
 from qudi.util.units import ScaledFloat
 from qudi.core.statusvariable import StatusVar
 from qudi.interface.spectrometer_interface import PortType
 from qudi.logic.spectrometer_logic import AcquisitionMode
 
-import os
 import pyqtgraph as pg
 import numpy as np
 from functools import partial
@@ -49,10 +48,10 @@ from qtpy import uic
 
 from qudi.gui.gui_components.colorbar.colorbar import ColorbarWidget
 
-class SpectrometerGui(GUIBase):
+class SpectrometerGui(GuiBase):
     """ GUI module to interface a spectrometer """
 
-    spectrometer_logic = Connector(interface='SpectrometerLogic')
+    spectrometer_logic = Connector(name='spectrometer_logic', interface='SpectrometerLogic')
 
     _cooler_temperature_unit = ConfigOption('cooler_temperature_unit')
 
